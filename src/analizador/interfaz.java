@@ -552,7 +552,16 @@ public class interfaz extends javax.swing.JFrame {
  
     public void Imprimir (String resultado)
     {
-        
+        int tamaño = nombre.length();
+        int punto = 0;
+        for (int i = 0; i < tamaño; i++) 
+        {
+            if(nombre.charAt(i) == '.')
+            {
+                punto = i;
+            }                      
+        }
+        nombre = nombre.substring(0, punto);
         File fichero2 = new File(nombre + ".out");
             PrintWriter writer2; 
 
