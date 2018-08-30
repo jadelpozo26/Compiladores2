@@ -1,71 +1,15 @@
-***Error*** Linea: 1 Columna: 1-1 simbolo no reconocido: #
-void      Linea: 1 Columna: 2-5 T_VOID
-void      Linea: 2 Columna: 5-8 T_VOID
-void      Linea: 2 Columna: 10-13 T_VOID
-string        Linea: 2 Columna: 15-20 T_STRING
-NewArray         Linea: 2 Columna: 22-29 T_NEWARRAY
-.        Linea: 3 Columna: 1-1 '.'
-12.12        Linea: 3 Columna: 2-6 T_DOUBLENUM (valor = 12.12 )
-int        Linea: 4 Columna: 1-3 T_ENTERO
-string        Linea: 5 Columna: 1-6 T_STRING
-class        Linea: 6 Columna: 1-5 T_CLASS
-bool      Linea: 6 Columna: 7-10 T_BOOL
-0X23abcdf        Linea: 7 Columna: 1-9 T_ENTEROHEX (valor = 0X23abcdf )
-23        Linea: 7 Columna: 11-12 T_ENTERODECIMAL (valor = 23 )
-New         Linea: 7 Columna: 14-16 T_NEW
-if      Linea: 8 Columna: 1-2 T_IF
-this        Linea: 8 Columna: 4-7 T_THIS
-extends        Linea: 9 Columna: 1-7 T_EXTENDS
-implements        Linea: 10 Columna: 1-10 T_IMPLEMENTS
-bool      Linea: 11 Columna: 1-4 T_BOOL
-hola_45        Linea: 12 Columna: 1-7 T_ID
-qwertyuiopasdfghjklzxcvbnmnbvcx         Linea: 13 Columna: 1-49T_ID 
-***Error*** Linea: 13 Columna: 1-49 Identificador truncado
-//hola esto es un comentario        Linea: 14 Columna: 0-0 T_COMENTARIOS
-holaestoesidentificador        Linea: 17 Columna: 1-23 T_ID
-"hola"        Linea: 18 Columna: 1-6 T_STRINGA
-[]        Linea: 20 Columna: 1-2 '[]'
-//         Linea: 22 Columna: 0-0 T_COMENTARIOS
-(        Linea: 24 Columna: 1-1 '('
-)        Linea: 24 Columna: 3-3 ')'
-()        Linea: 24 Columna: 5-6 '()'
-[        Linea: 24 Columna: 8-8 '['
-]        Linea: 24 Columna: 10-10 ']'
-%         Linea: 24 Columna: 12-12 '%'
-***Error*** Linea: 24 Columna: 14-14 simbolo no reconocido: &
-!=        Linea: 25 Columna: 1-2 '!='
-==        Linea: 26 Columna: 1-2 '=='
-<=        Linea: 27 Columna: 1-2 '<='
-.        Linea: 28 Columna: 1-1 '.'
-12        Linea: 28 Columna: 2-3 T_ENTERODECIMAL (valor = 12 )
-E        Linea: 28 Columna: 4-4 T_ID
-+         Linea: 28 Columna: 5-5 '+'
-2        Linea: 28 Columna: 6-6 T_ENTERODECIMAL (valor = 2 )
-12.e+69        Linea: 29 Columna: 1-7 T_DOUBLENUM (valor = 12.e+69 )
-/*
-
-
-fdsa
-fdsa
-hgg
-fdsa
-
-*/        Linea: 30 Columna: 0-0 T_COMENTARIOS
-fdsafdsa        Linea: 40 Columna: 1-8 T_ID
-/*
-
-
-
-
-fdsa
-
-
-fdsa
-
-fcv
-
-
-
-
-
-*/        Linea: 47 Columna: 0-0 T_COMENTARIOS
+// this file should not generate any output        Linea: 1 Columna: 0-0 T_COMENTARIOS
+// here is a comment        Linea: 2 Columna: 0-0 T_COMENTARIOS
+/* here is a simple comment */        Linea: 3 Columna: 0-0 T_COMENTARIOS
+/* here 
+is 
+a 
+multi-line
+comment
+*/        Linea: 4 Columna: 0-0 T_COMENTARIOS
+/* here are some nasty comments: */        Linea: 11 Columna: 0-0 T_COMENTARIOS
+/* ///// /// */        Linea: 12 Columna: 0-0 T_COMENTARIOS
+/*******/        Linea: 13 Columna: 0-0 T_COMENTARIOS
+true         Linea: 14 Columna: 1-4 T_CONSTBOOL (valor = true )
+false         Linea: 14 Columna: 6-10 T_CONSTBOOL (valor = false )
+***Error*** Linea: 15 Columna: 0-0 no cierra el comentario /*    

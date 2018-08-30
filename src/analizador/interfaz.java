@@ -50,12 +50,8 @@ public class interfaz extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,27 +64,12 @@ public class interfaz extends javax.swing.JFrame {
 
         jLabel1.setText("Sentencia");
 
-        jLabel2.setText("Resultado");
-
-        jButton2.setText("Limpiar");
+        jButton2.setText("Buscar Archivo");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "Nombre", "ID"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,43 +77,28 @@ public class interfaz extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                .addComponent(jLabel1)
                 .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addGap(44, 44, 44)
                         .addComponent(jButton2))
-                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField1, jTextField2});
-
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2)
-                            .addComponent(jButton1))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(56, 56, 56)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton1))
+                .addContainerGap(57, Short.MAX_VALUE))
         );
 
         pack();
@@ -194,7 +160,7 @@ public class interfaz extends javax.swing.JFrame {
                 for(int i=0;i<tokenslist.size();i++){
                     System.out.println(tokenslist.get(i).nombre + "=" + tokenslist.get(i).ID);
                 }
-                jTextField2.setText(resultado);
+                Imprimir(resultado);
                 return;
             }
         
@@ -343,7 +309,8 @@ public class interfaz extends javax.swing.JFrame {
                     break;
                 case T_ERRORCOMENTARIOS:
                     resultado= resultado + "***Error*** Linea: " + ContadorLineas + " Columna: " +ContadorCaracterInicio + "-" + ContadorCaracteres + " no cierra el comentario " + lexer.lexeme + "\r\n";
-                    break;
+                    Imprimir(resultado);
+                    return;
                 case T_STRINGA:
                     ContadorCaracteres = lexer.lexeme.length() + ContadorCaracterInicio;
                     ContadorCaracterInicio++;
@@ -574,7 +541,16 @@ public class interfaz extends javax.swing.JFrame {
                     resultado=ContadorLineas + " " + resultado+ "<"+ lexer.lexeme + "> ";
             }
             
-            File fichero2 = new File("salida.out");
+            
+               
+           }
+        
+           
+    }
+ 
+    public void Imprimir (String resultado)
+    {
+        File fichero2 = new File("salida.out");
             PrintWriter writer2; 
 
             try 
@@ -585,33 +561,21 @@ public class interfaz extends javax.swing.JFrame {
             } catch (FileNotFoundException ex) 
             {
             }
-               
-           }
-        
-           
     }
- 
     public void tablaResultado(){
         Object[][] matriz = new Object [tokenslist.size()][2];
         for(int i =0; i<tokenslist.size();i++){
             matriz[i][0] = tokenslist.get(i).nombre;
             matriz[i][1] = tokenslist.get(i).ID;
         }
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(matriz,
-            new String [] {
-                "Nombre", "ID"
-        }
-        ));
+        
+        
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 
 }
