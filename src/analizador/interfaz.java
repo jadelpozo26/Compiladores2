@@ -34,6 +34,7 @@ public class interfaz extends javax.swing.JFrame {
     /** Creates new form interfaz */
     List<identificador> tokenslist;
     File ArchivoSelec;
+    String nombre;
     
     public interfaz() {
         initComponents();
@@ -122,6 +123,7 @@ public class interfaz extends javax.swing.JFrame {
        if(abre != null)
        {
            ArchivoSelec = abre;
+           nombre = abre.getName();
        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -550,7 +552,8 @@ public class interfaz extends javax.swing.JFrame {
  
     public void Imprimir (String resultado)
     {
-        File fichero2 = new File("salida.out");
+        
+        File fichero2 = new File(nombre + ".out");
             PrintWriter writer2; 
 
             try 

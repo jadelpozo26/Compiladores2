@@ -1,0 +1,15 @@
+// this file should not generate any output        Linea: 1 Columna: 0-0 T_COMENTARIOS
+// here is a comment        Linea: 2 Columna: 0-0 T_COMENTARIOS
+/* here is a simple comment */        Linea: 3 Columna: 0-0 T_COMENTARIOS
+/* here 
+is 
+a 
+multi-line
+comment
+*/        Linea: 4 Columna: 0-0 T_COMENTARIOS
+/* here are some nasty comments: */        Linea: 11 Columna: 0-0 T_COMENTARIOS
+/* ///// /// */        Linea: 12 Columna: 0-0 T_COMENTARIOS
+/*******/        Linea: 13 Columna: 0-0 T_COMENTARIOS
+true         Linea: 14 Columna: 1-4 T_CONSTBOOL (valor = true )
+false         Linea: 14 Columna: 6-10 T_CONSTBOOL (valor = false )
+***Error*** Linea: 15 Columna: 0-0 no cierra el comentario /*    
