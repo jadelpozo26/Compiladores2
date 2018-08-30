@@ -8,6 +8,7 @@ import static analizador.Token.*;
 L = [a-zA-Z]                           
 D = [0-9]
 P = [(){}\[\]]
+D2 = [1-9]
 HEX = [0X|0x]
 ENTER = [\n]
 CARACT = [^\n]
