@@ -1,13 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/*
- * interfaz.java
- *
- * Created on 16/11/2011, 07:44:27 AM
- */
 
 package analizador;
 
@@ -25,10 +16,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 
-/**
- *
- * @author Carlos
- */
 public class interfaz extends javax.swing.JFrame {
 
     /** Creates new form interfaz */
@@ -66,7 +53,8 @@ public class interfaz extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Sentencia");
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel1.setText("Analizador Léxico");
 
         jButton2.setText("Buscar Archivo");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -94,10 +82,7 @@ public class interfaz extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(jButton3)
@@ -106,16 +91,18 @@ public class interfaz extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addComponent(jButton2)
                         .addGap(23, 23, 23)
-                        .addComponent(jButton1)
-                        .addGap(66, 66, 66)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(181, 181, 181)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(58, 58, 58)
+                .addGap(32, 32, 32)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton3)
@@ -333,11 +320,11 @@ public class interfaz extends javax.swing.JFrame {
                     ContadorCaracterInicio = ContadorCaracteres ;
                     break;
                 case T_COMENTARIOS:
-                    resultado = resultado + lexer.lexeme + "        Linea: " + ContadorLineas + " Columna: " +  ContadorCaracterInicio + "-" + ContadorCaracteres +  " T_COMENTARIOS\r\n";
+                    //resultado = resultado + lexer.lexeme + "        Linea: " + ContadorLineas + " Columna: " +  ContadorCaracterInicio + "-" + ContadorCaracteres +  " T_COMENTARIOS\r\n";
                     break;
                 case T_COMENTARIOS2:
                     int ContEnt = 0;
-                    resultado = resultado + lexer.lexeme + "        Linea: " + ContadorLineas + " Columna: " +  ContadorCaracterInicio + "-" + ContadorCaracteres +  " T_COMENTARIOS\r\n";
+                    //resultado = resultado + lexer.lexeme + "        Linea: " + ContadorLineas + " Columna: " +  ContadorCaracterInicio + "-" + ContadorCaracteres +  " T_COMENTARIOS\r\n";
                     int car = lexer.lexeme.length();
                     for (int i = 0; i < car; i++) 
                     {
@@ -351,13 +338,13 @@ public class interfaz extends javax.swing.JFrame {
                     
                     break;
                 case T_ERRORCOMENTARIOS:
-                    resultado= resultado + "***Error*** Linea: " + ContadorLineas + " Columna: " +ContadorCaracterInicio + "-" + ContadorCaracteres + " no cierra el comentario " + lexer.lexeme + "\r\n";
+                    resultado= resultado + "***Error*** Linea: " + ContadorLineas + " Columna: " +ContadorCaracterInicio + "-" + ContadorCaracteres + " no esta cerrado el comentario" + "\r\n";
                     Imprimir(resultado);
                     return;
                 case T_STRINGA:
                     ContadorCaracteres = lexer.lexeme.length() + ContadorCaracterInicio;
                     ContadorCaracterInicio++;
-                    resultado = resultado + lexer.lexeme + "        Linea: " + ContadorLineas + " Columna: " + ContadorCaracterInicio + "-" + ContadorCaracteres + " T_STRINGA\r\n";
+                    resultado = resultado + lexer.lexeme + "        Linea: " + ContadorLineas + " Columna: " + ContadorCaracterInicio + "-" + ContadorCaracteres + " T_STRINGA (valor = " + lexer.lexeme + " )\r\n";
                     ContadorCaracterInicio = ContadorCaracteres ;
                     break;
                  case T_ENTEROHEX:
