@@ -7,10 +7,7 @@ package analizador;
 
 import java.io.File;
 
-/**
- *
- * @author Carlos
- */
+
 public class Main {
 
     /**

@@ -66,7 +66,7 @@ OPCORCHETEDER = ("}")
 OPBRACKETS = ("[]")
 OPPARENTESIS = ("()")
 OPCORCHETES = ("{}")
-DOUBLENUM = {D}+("."){D}*([E|e]("+"))?{D}*
+DOUBLENUM = {D}+("."){D}*([E|e]?[+-]?{D}+)?
 IDENTIFICADOR = {L}({L}|{D}|("_"))*
 
 %{
