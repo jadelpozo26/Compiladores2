@@ -19,7 +19,8 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String path = "C:\\Users\\jadel\\Desktop\\JflexyCupEjemplo\\src\\Analizadores\\A_Lexico.jflex";
+        
+        String path = "C:\\Users\\jadel\\Desktop\\Compiladores2\\minic2\\src\\Analizadores\\A_Lexico.jflex";
         String path2 = "C:\\Users\\jadel\\Desktop\\Compiladores2-master\\src\\analizador\\Sintactico.cup";
         generarLexer(path, path2);
        

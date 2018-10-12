@@ -18,6 +18,7 @@ import java.io.PrintWriter;
 import java.io.Reader;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
@@ -35,8 +36,20 @@ public class NMain {
     {
         // TODO code application logic here
         
-            String path = "C:\\Users\\jadel\\Desktop\\prueba.frag";
+        
+
+        System.out.println ("Empezamos el programa");
+
+        System.out.println ("Introduzca una ruta:");
+
+        String entradaTeclado = "";
+
+        Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
+
+        entradaTeclado = entradaEscaner.nextLine ();
+            String path = entradaTeclado;
             File file=new File(path);
+         
             String ubicacion = file.getAbsolutePath();
             String[] archivoPrueba = {ubicacion};
             parser.main(archivoPrueba);
