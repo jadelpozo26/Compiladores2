@@ -35,7 +35,7 @@ public class Main {
         //String path =ubicacion;
         generarLexer(path1);
  
-        String archSintactico = "C:/Users/jadel/Desktop/Compiladores-master/MiniC#/asintactico.cup";
+        String archSintactico = "C:\\Users\\jadel\\Desktop\\Compiladores-master\\MiniC#\\asintactico.cup";
         System.out.println("\n*** Procesando archivo default ***\n");
         String[] asintactico = {"-parser", "AnalizadorSintactico", archSintactico};
       

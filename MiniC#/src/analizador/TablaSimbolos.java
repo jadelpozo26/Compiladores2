@@ -1,6 +1,9 @@
 
 package analizador;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 public class TablaSimbolos {
@@ -96,6 +99,40 @@ public class TablaSimbolos {
         }
     }
     
+    
+    public void Escribir(List<TablaSimbolos> ListaSimbolos) throws IOException
+  {
+//      String sFichero = "Tabla de Simbolos.txt";
+//      File fichero = new File(sFichero);
+//      
+//      if(fichero.exists())
+//      {
+//          BufferedWriter bw = new BufferedWriter(new FileWriter(sFichero));
+//          
+//          for (int x=0;x<ListaSimbolos.size();x++)
+//          {
+//              bw.write(ListaSimbolos.get(x).tipo + " " + ListaSimbolos.get(x).nombre + " " +
+//              ListaSimbolos.get(x).valor + ListaSimbolos.get(x).clases); 
+//         }
+//           
+//      }
+      int x;
+      
+      x= ListaSimbolos.size() -1 ;
+      FileWriter fichero = null;
+      PrintWriter pw = null;
+      
+      fichero = new FileWriter("Tabla de Simbolos.txt", true);
+      pw = new PrintWriter(fichero);
+      
+      pw.println(ListaSimbolos.get(x).tipo + "  | " + ListaSimbolos.get(x).nombre + "   | " +
+             ListaSimbolos.get(x).valor + "   | " + ListaSimbolos.get(x).bandera + "    | " +ListaSimbolos.get(x).clases);
+      
+      if(null != fichero)
+      {
+          fichero.close();
+      }
+  }
   
     
 }

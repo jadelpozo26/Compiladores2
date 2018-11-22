@@ -6,6 +6,9 @@
         <group>
             <file>file:/C:/Users/jadel/Desktop/Compiladores-master/MiniC%23/src/analizador/Main.java</file>
             <file>file:/C:/Users/jadel/Desktop/Compiladores-master/MiniC%23/src/analizador/AnalizadorSintactico.java</file>
+            <file>file:/C:/Users/jadel/Desktop/Compiladores-master/MiniC%23/src/analizador/TablaSimbolos.java</file>
+            <file>file:/C:/Users/jadel/Desktop/Compiladores-master/MiniC%23/src/analizador/Lexer.flex</file>
+            <file>file:/C:/Users/jadel/Desktop/Compiladores-master/MiniC%23/src/analizador/Postfijo.java</file>
             <file>file:/C:/Users/jadel/Desktop/Compiladores-master/MiniC%23/src/analizador/Operaciones.java</file>
             <file>file:/C:/Users/jadel/Desktop/Compiladores-master/MiniC%23/src/analizador/interfaz.java</file>
             <file>file:/C:/Users/jadel/Desktop/Compiladores-master/MiniC%23/src/analizador/identificador.java</file>

@@ -13,6 +13,7 @@ package analizador;
 
 import static analizador.Main.generarLexer;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -194,16 +195,29 @@ public class interfaz extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
         
-        //ruta=ubicacion;
-        //String[] RutaArchivo={ruta};
+        BufferedWriter bw = null;
+        try {
+            // TODO add your handling code here:
+            
+            //ruta=ubicacion;
+            //String[] RutaArchivo={ruta};
+            
+            //AnalizadorSintactico.main(RutaArchivo);
+            String sFichero = "Tabla de Simbolos.txt";
+            bw = new BufferedWriter(new FileWriter(sFichero));
+            bw.write("");
+            bw.write("   Tipo   |   Nombre   |   Valor   |   Ambito   |   No. Clase  ");
+             bw.close();
+            String[] archivoPrueba = {ubicacion};
+            AnalizadorSintactico.main(archivoPrueba);
+            System.out.println("Ejecutado!");
+        } catch (IOException ex) {
+            Logger.getLogger(interfaz.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+       
         
-        //AnalizadorSintactico.main(RutaArchivo);
         
-        String[] archivoPrueba = {ubicacion};
-        AnalizadorSintactico.main(archivoPrueba);
-        System.out.println("Ejecutado!");
         
         
     }//GEN-LAST:event_jButton6ActionPerformed

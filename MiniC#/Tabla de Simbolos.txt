@@ -1,0 +1,17 @@
+   Tipo   |   Nombre   |   Valor   |   Ambito   |   No. Clase  double  | f2   |    | 3    | 0
+int  | a   |    | 2    | 0
+int  | b   |    | 2    | 0
+int  | c   |    | 2    | 0
+double  | p1   |    | 2    | 0
+void  | main   |    | 3    | 1
+int  | number1   |    | 2    | 0
+int  | number2   |    | 2    | 0
+int  | number3   |    | 2    | 0
+double  | numberA   |    | 2    | 0
+double  | numberB   |    | 2    | 0
+double  | numberC   |    | 2    | 0
+string  | My_String   |    | 2    | 0
+string  | My_String   | " This is a string"   | 2    | 0
+string  | My_String   | c3My_String   | 2    | 0
+string  | My_String   | c3My_string   | 2    | 0
+int  | number1   | global1   | 2    | 0

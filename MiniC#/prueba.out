@@ -1,0 +1,108 @@
+void			linea 1 columnas:1-4 Token: T_VOID
+main			linea 1 columnas:6-9 Token: T_IDENTIFICADOR
+()			linea 1 columnas:10-11 Token: '()'
+{			linea 1 columnas:12-12 Token: '{'
+int			linea 2 columnas:3-5 Token: T_INT
+m1			linea 2 columnas:7-8 Token: T_IDENTIFICADOR
+;			linea 2 columnas:9-9 Token: ';'
+int			linea 3 columnas:3-5 Token: T_INT
+m2			linea 3 columnas:7-8 Token: T_IDENTIFICADOR
+;			linea 3 columnas:9-9 Token: ';'
+int			linea 4 columnas:3-5 Token: T_INT
+m3			linea 4 columnas:7-8 Token: T_IDENTIFICADOR
+;			linea 4 columnas:9-9 Token: ';'
+bool			linea 5 columnas:3-6 Token: T_BOOL
+t			linea 5 columnas:8-8 Token: T_IDENTIFICADOR
+;			linea 5 columnas:9-9 Token: ';'
+Parser			linea 6 columnas:3-8 Token: T_IDENTIFICADOR
+MyParser			linea 6 columnas:10-17 Token: T_IDENTIFICADOR
+;			linea 6 columnas:18-18 Token: ';'
+m1			linea 7 columnas:3-4 Token: T_IDENTIFICADOR
+=			linea 7 columnas:5-5 Token: '='
+MyParser			linea 7 columnas:6-13 Token: T_IDENTIFICADOR
+.			linea 7 columnas:14-14 Token: '.'
+f1			linea 7 columnas:15-16 Token: T_IDENTIFICADOR
+(			linea 7 columnas:17-17 Token: '('
+1			linea 7 columnas:18-18 Token: T_CONST_ENTERO (valor = 1)
+,			linea 7 columnas:19-19 Token: ','
+2.2			linea 7 columnas:20-22 Token: T_CONST_DOUBLE (valor = 2.2)
+,			linea 7 columnas:23-23 Token: ','
+"3"			linea 7 columnas:24-26 Token: T_CONST_STRING (valor = "3")
+)			linea 7 columnas:27-27 Token: ')'
+;			linea 7 columnas:28-28 Token: ';'
+while			linea 8 columnas:3-7 Token: T_WHILE
+(			linea 8 columnas:9-9 Token: '('
+m1			linea 8 columnas:10-11 Token: T_IDENTIFICADOR
+>			linea 8 columnas:12-12 Token: '>'
+10			linea 8 columnas:13-14 Token: T_CONST_ENTERO (valor = 10)
+)			linea 8 columnas:15-15 Token: ')'
+{			linea 8 columnas:17-17 Token: '{'
+for			linea 9 columnas:4-6 Token: T_FOR
+(			linea 9 columnas:8-8 Token: '('
+m2			linea 9 columnas:9-10 Token: T_IDENTIFICADOR
+=			linea 9 columnas:11-11 Token: '='
+f1			linea 9 columnas:12-13 Token: T_IDENTIFICADOR
+(			linea 9 columnas:14-14 Token: '('
+1			linea 9 columnas:15-15 Token: T_CONST_ENTERO (valor = 1)
+,			linea 9 columnas:16-16 Token: ','
+2.2			linea 9 columnas:17-19 Token: T_CONST_DOUBLE (valor = 2.2)
+,			linea 9 columnas:20-20 Token: ','
+"3"			linea 9 columnas:21-23 Token: T_CONST_STRING (valor = "3")
+)			linea 9 columnas:24-24 Token: ')'
+;			linea 9 columnas:25-25 Token: ';'
+m2			linea 9 columnas:26-27 Token: T_IDENTIFICADOR
+=			linea 9 columnas:28-28 Token: '='
+m2			linea 9 columnas:29-30 Token: T_IDENTIFICADOR
++			linea 9 columnas:31-31 Token: '+'
+1			linea 9 columnas:32-32 Token: T_CONST_ENTERO (valor = 1)
+;			linea 9 columnas:33-33 Token: ';'
+(			linea 9 columnas:34-34 Token: '('
+2			linea 9 columnas:35-35 Token: T_CONST_ENTERO (valor = 2)
+)			linea 9 columnas:36-36 Token: ')'
+)			linea 9 columnas:37-37 Token: ')'
+Print			linea 10 columnas:5-9 Token: T_IDENTIFICADOR
+(			linea 10 columnas:10-10 Token: '('
+m1			linea 10 columnas:11-12 Token: T_IDENTIFICADOR
+*			linea 10 columnas:14-14 Token: '*'
+2			linea 10 columnas:16-16 Token: T_CONST_ENTERO (valor = 2)
+)			linea 10 columnas:17-17 Token: ')'
+;			linea 10 columnas:18-18 Token: ';'
+if			linea 11 columnas:6-7 Token: T_IF
+(			linea 11 columnas:9-9 Token: '('
+!			linea 11 columnas:10-10 Token: '!'
+(			linea 11 columnas:11-11 Token: '('
+m1			linea 11 columnas:12-13 Token: T_IDENTIFICADOR
+*			linea 11 columnas:14-14 Token: '*'
+2			linea 11 columnas:15-15 Token: T_CONST_ENTERO (valor = 2)
+<			linea 11 columnas:17-17 Token: '<'
+m2			linea 11 columnas:19-20 Token: T_IDENTIFICADOR
+)			linea 11 columnas:21-21 Token: ')'
+)			linea 11 columnas:22-22 Token: ')'
+{			linea 12 columnas:4-4 Token: '{'
+break			linea 13 columnas:9-13 Token: T_BREAK
+;			linea 13 columnas:14-14 Token: ';'
+}			linea 14 columnas:4-4 Token: '}'
+}			linea 15 columnas:3-3 Token: '}'
+if			linea 16 columnas:3-4 Token: T_IF
+(			linea 16 columnas:6-6 Token: '('
+m2			linea 16 columnas:7-8 Token: T_IDENTIFICADOR
+<=			linea 16 columnas:9-10 Token: '<='
+m3			linea 16 columnas:11-12 Token: T_IDENTIFICADOR
+)			linea 16 columnas:13-13 Token: ')'
+m1			linea 16 columnas:15-16 Token: T_IDENTIFICADOR
+=			linea 16 columnas:17-17 Token: '='
+1			linea 16 columnas:18-18 Token: T_CONST_ENTERO (valor = 1)
+;			linea 16 columnas:19-19 Token: ';'
+t			linea 18 columnas:3-3 Token: T_IDENTIFICADOR
+=			linea 18 columnas:5-5 Token: '='
+(			linea 18 columnas:7-7 Token: '('
+a1			linea 18 columnas:8-9 Token: T_IDENTIFICADOR
+<			linea 18 columnas:11-11 Token: '<'
+y			linea 18 columnas:13-13 Token: T_IDENTIFICADOR
+||			linea 18 columnas:15-16 Token: '||'
+a1			linea 18 columnas:18-19 Token: T_IDENTIFICADOR
+<=			linea 18 columnas:21-22 Token: '<='
+y			linea 18 columnas:24-24 Token: T_IDENTIFICADOR
+)			linea 18 columnas:25-25 Token: ')'
+;			linea 18 columnas:26-26 Token: ';'
+}			linea 19 columnas:2-2 Token: '}'
